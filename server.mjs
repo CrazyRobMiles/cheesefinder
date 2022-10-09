@@ -109,6 +109,11 @@ function getGame(req) {
 
 
 function handlePageRequest(request, response) {
+
+    if(request.url == '/'){
+        request.url = '/index.html';
+    }
+
     console.log("Page request for:" + request.url);
 
     let filePath = basePath + request.url;
